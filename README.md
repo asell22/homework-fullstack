@@ -17,7 +17,7 @@ also review tests, read READMEs and code comments, and inspect commits and commi
 
 1. Create a web application that allows the user to search for KPCC articles.  For each article found, display its title and any associated audio files. Note that some articles have related audio content and others do not.  Use the search API [documented here](https://github.com/SCPR/api-docs/blob/master/KPCC/v3/README.md).
 
-1. The search page should look like the screenshot below.  Implement it using HTML and your own SASS/SCSS/CSS. Do not use Bootstrap, Materialize, or any third party style libraries. The results page does not need to match that in design, so feel free to style the results how you would like.
+1. The search page should look like [this screenshot](search_page.png).  Implement it using HTML and your own SASS/SCSS/CSS. Do not use Bootstrap, Materialize, or any third party style libraries. The results page does not need to match that in design, so feel free to style the results how you would like.
 
 1. The application can be implemented in the language you feel most comfortable in. Front-end javascript is not required, but may be used. Third party dependencies and libraries are allowed, as long as they do not interfere with the style part of the objective in step 2.
 

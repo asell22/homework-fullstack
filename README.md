@@ -13,7 +13,7 @@ also review tests, read READMEs and code comments, and inspect commits and commi
 ## Implementation
 1. This application was generated with the [express-generator](https://expressjs.com/en/starter/generator.html) tool. It uses [express.js](https://expressjs.com/) for its server-side technology and vanilla JavaScript for its client-side technology.
 
-##Todos
+## Todos
 Timeboxing development left some tasks remaining. Here are a couple:
 1. Testing - This application should use some testing framework (e.g. Jest or Mocha) to verify expectations when making requests to api endpoints.
 

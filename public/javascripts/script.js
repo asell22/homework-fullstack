@@ -37,6 +37,10 @@ function buildArticlesList(response) {
     articleLi.id = article.id
     articleLi.innerText = article.title
     articlesList.appendChild(articleLi)
+
+    if ( article.audio.length ) {
+      buildAudio(articleLi, article.audio[0].url)
+    }
   }
 
   // build header
@@ -46,4 +50,17 @@ function buildArticlesList(response) {
   //append header and articles
   articlesContainer.append(resultsHeader)
   articlesContainer.append(articlesList);
+}
+
+function buildAudio(li, url) {
+  const articleAudio = document.createElement('audio')
+  articleAudio.controls = 'controls';
+  if (articleAudio.canPlayType('audio/mpeg')) {
+    articleAudio.setAttribute('type', 'audio/mpeg')
+    articleAudio.setAttribute('src', url);
+  }
+  let audioDiv = document.createElement('div')
+  audioDiv.className = 'audio'
+  audioDiv.append(articleAudio)
+  li.append(audioDiv)
 }

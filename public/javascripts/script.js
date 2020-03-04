@@ -20,7 +20,13 @@ function reqListener() {
   const statusMessage = response.data.meta.status.message
 
   if ( statusCode === 200 && statusMessage === 'OK' ) {
-    buildArticlesList(response)
+    if ( response.data.articles.length ) {
+      buildArticlesList(response)
+    } else {
+      renderNoArticlesMessage()
+    }
+  } else {
+    renderServerError()
   }
 }
 
@@ -53,6 +59,7 @@ function buildArticlesList(response) {
 }
 
 function buildAudio(li, url) {
+  // build audio element
   const articleAudio = document.createElement('audio')
   articleAudio.controls = 'controls';
   if (articleAudio.canPlayType('audio/mpeg')) {
@@ -63,4 +70,21 @@ function buildAudio(li, url) {
   audioDiv.className = 'audio'
   audioDiv.append(articleAudio)
   li.append(audioDiv)
+}
+
+function renderNoArticlesMessage() {
+  const articlesContainer = document.getElementById("articles-container")
+  const noArticlesParagraph = document.createElement('p')
+  noArticlesParagraph.id = 'no-articles'
+  noArticlesParagraph.innerText = 'There are no articles associated with your query'
+  articlesContainer.append(noArticlesParagraph)
+}
+
+function renderServerError() {
+  // this should execute if request to /api fails
+  const articlesContainer = document.getElementById("articles-container")
+  const serverErrorParagraph = document.createElement('p')
+  serverErrorParagraph.id = 'server-error'
+  serverErrorParagraph.innerText = 'We are currently experiencing technical difficulties. Sorry for any inconvenience.'
+  articlesContainer.append(serverErrorParagraph)
 }

@@ -3,7 +3,7 @@ function onSubmit(event) {
   event.preventDefault();
   const queryInput = document.getElementById("query-input");
   const articlesContainer = document.getElementById("articles-container");
-
+  
   let queryValue = queryInput.value;
   articlesContainer.innerHTML = '';
   console.log('submit:', queryValue);

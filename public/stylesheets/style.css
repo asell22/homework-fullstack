@@ -3,6 +3,49 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  border: 2px solid #9884fc;
+  border-radius: 3px;
+  height: 52px;
+  font-size: 14px;
+  font-family: Open Sans,Helvetica,Arial,sans-serif;
+  background: #fff;
+  padding: 10px 15px;
+  font-weight: 300;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: #9884fc;
+  color: #fff;
+}
+
+
+
+ol {
+  padding: 0px;
+}
+
+ol > li {
+  list-style-position: inside;
+  margin: 20px 0;
+  /* display: flex; */
+  align-items: center;
+}
+
+li > div.audio {
+  margin: 20px 0;
 }

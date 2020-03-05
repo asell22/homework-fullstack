@@ -9,7 +9,6 @@ function onSubmit(event) {
   if ( !queryValue.length ) return;
 
   articlesContainer.innerHTML = '';
-  console.log('submit:', queryValue);
   queryInput.value = '';
 
   //xhr logic
@@ -21,7 +20,6 @@ function onSubmit(event) {
 
 function reqListener() {
   const response = JSON.parse(this.responseText)
-  console.log(response);
   const statusCode = response.data.meta.status.code
   const statusMessage = response.data.meta.status.message
 
